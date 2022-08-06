@@ -173,8 +173,8 @@ with st.container():
 
     # 8.2 - Create slider, selectbox, text_input
     max_depth = set_col.slider('What should be the max_depth of the model ?', min_value=1, max_value=36, step=1)
-    n_estimators = set_col.selectbox('Write Your Title Here', options= [100, 200, 300, 'No Limit'], index= 0 )
-    input_feature = set_col.text_input('Write Your Title Here', 'distance',placeholder='Password')
+    n_estimators = set_col.selectbox('What shoul be the n_estimators ?', options= [100, 200, 300, 'No Limit'], index= 0 )
+    input_feature = set_col.text_input('Select your Feature for the prediction of "Total :"', 'distance',placeholder='Password')
 
     if input_feature == 'No Limit':
         regr = RandomForestRegressor(max_depth=max_depth)
@@ -198,13 +198,14 @@ with st.container():
 
     # 8.4 - Errors and R-Squared
     disp_col.subheader('Mean Absolute Error is:')
-    disp_col.write(mean_absolute_error(y, prediction))
+    mae = disp_col.write(mean_absolute_error(y, prediction))
+
 
     disp_col.subheader('Mean Squared Error is:')
-    disp_col.write(mean_squared_error(y, prediction))
+    mse = disp_col.write(mean_squared_error(y, prediction))
 
     disp_col.subheader('R Squared Score of the Model is:')
-    disp_col.write(r2_score(y, prediction))
+    r_sqr = disp_col.write(r2_score(y, prediction))
 
 
 # 9 - Contact Form (Send Mail to You)
