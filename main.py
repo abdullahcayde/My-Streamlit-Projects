@@ -160,7 +160,7 @@ with st.container():
 # 8 - Slider, Selection Box, Text Input and ML Model
 with st.container():
     st.write('---')
-    st.title('Slider, Selection Box, Text Input and ML Model')
+    st.title('Machine Learning Model')
 
     set_col, disp_col = st.columns(2)
 
