@@ -182,7 +182,7 @@ with st.container():
     set_col.text('Here is the list of features in my data :')
     set_col.table(df.columns)
 
-    disp_col.subheader('Data Frame -TAXI Describe ')
+    disp_col.subheader('Data Frame - TAXI Describe ')
     disp_col.write(df.describe().T)
 
     # 8.3 - ML Model RandomForestRegressor
