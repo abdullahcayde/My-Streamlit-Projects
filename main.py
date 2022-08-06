@@ -69,8 +69,8 @@ def local_css(file_name):
 
 # 3 - Load Assets (lottie, images)
 lottie_coding =load_lottieurl('https://assets10.lottiefiles.com/packages/lf20_0yfsb3a1.json')
-img01_contact_form = Image.open('/Users/macbook/Desktop/projects/Github_Repositories/My Streamlit Projects/01 - My First Project/images/coding01.jpg')
-img02_contact_form = Image.open(('/Users/macbook/Desktop/projects/Github_Repositories/My Streamlit Projects/01 - My First Project/images/coding02.jpg'))
+#img01_contact_form = Image.open('/Users/macbook/Desktop/projects/Github_Repositories/My Streamlit Projects/01 - My First Project/images/coding01.jpg')
+#img02_contact_form = Image.open(('/Users/macbook/Desktop/projects/Github_Repositories/My Streamlit Projects/01 - My First Project/images/coding02.jpg'))
 
 
 # 4 - Headers Section01
