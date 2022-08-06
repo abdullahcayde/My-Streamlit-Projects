@@ -23,6 +23,7 @@
 import pandas as pd
 import numpy as np
 import seaborn as sns
+import os
 
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
@@ -63,8 +64,8 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}<style>", unsafe_allow_html=True)
 
-path = '/Users/macbook/Desktop/projects/Github_Repositories/My Streamlit Projects/01 - My First Project/style/style.css'
-local_css(path)
+#path = '/Users/macbook/Desktop/projects/Github_Repositories/My Streamlit Projects/01 - My First Project/style/style.css'
+#local_css(path)
 
 # 3 - Load Assets (lottie, images)
 lottie_coding =load_lottieurl('https://assets10.lottiefiles.com/packages/lf20_0yfsb3a1.json')
@@ -93,6 +94,7 @@ with st.container():
             - I am on a new project because of that i have to learn streamlit.
             - I have to learn joblib.
             - I have to learn lightgm.
+            - I have to learn ....
             ''')
         st.write('[Learn more>](https://github.com/abdullahcayde)')
 
