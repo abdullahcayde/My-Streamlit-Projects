@@ -46,6 +46,8 @@ def load_lottieurl(url):
         return None
     return r.json()
 
+path_main = '/Users/macbook/Desktop/projects/Github_Repositories/My Streamlit Projects/01 - My First Project/'
+
 # 1 - Set Page Configrations
 st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
 # 1.1 - Set Background Color
@@ -64,13 +66,13 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}<style>", unsafe_allow_html=True)
 
-path = '/Users/macbook/Desktop/projects/Github_Repositories/My Streamlit Projects/01 - My First Project/style/style.css'
+path = f'{path_main}style/style.css'
 local_css(path)
 
 # 3 - Load Assets (lottie, images)
 lottie_coding =load_lottieurl('https://assets10.lottiefiles.com/packages/lf20_0yfsb3a1.json')
-img01_contact_form = Image.open('/Users/macbook/Desktop/projects/Github_Repositories/My Streamlit Projects/01 - My First Project/images/coding01.jpg')
-img02_contact_form = Image.open(('/Users/macbook/Desktop/projects/Github_Repositories/My Streamlit Projects/01 - My First Project/images/coding02.jpg'))
+img01_contact_form = Image.open(f'{path_main}images/coding01.jpg')
+img02_contact_form = Image.open((f'{path_main}images/coding02.jpg'))
 
 
 # 4 - Headers Section01
@@ -137,7 +139,7 @@ with st.container():
         st.markdown("[Github Link ...](https://github.com/abdullahcayde/Trainings/tree/main/istatistik)")
 
 # 7 - DataFrame Read
-path = '/Users/macbook/Desktop/projects/Github_Repositories/My Streamlit Projects/01 - My First Project/data'
+path = f'{path_main}data'
 name = 'ebay09_jazz'
 use_cols =[1,2,3,4,5,6]
 
@@ -168,13 +170,13 @@ with st.container():
 
     # 8.1 - Read Taxi DataFrama
     set_col.subheader('Data Frame -TAXI Head')
-    df = get_data('/Users/macbook/Desktop/projects/Github_Repositories/My Streamlit Projects/01 - My First Project/data/taxis.csv')
+    df = get_data(f'{path_main}data/taxis.csv')
     set_col.write(df.head())
 
     # 8.2 - Create slider, selectbox, text_input
     max_depth = set_col.slider('What should be the max_depth of the model ?', min_value=1, max_value=36, step=1)
     n_estimators = set_col.selectbox('What shoul be the n_estimators ?', options= [100, 200, 300, 'No Limit'], index= 0 )
-    input_feature = set_col.text_input('Select your Feature for the prediction of "Total :"', 'distance',placeholder='Password')
+    input_feature = set_col.text_input('Select your Feature for the prediction of "Total :"', 'distance',placeholder='Feature')
 
     if input_feature == 'No Limit':
         regr = RandomForestRegressor(max_depth=max_depth)
@@ -188,6 +190,7 @@ with st.container():
     disp_col.write(df.describe().T)
 
     # 8.3 - ML Model RandomForestRegressor
+    #if input_feature.dtype() != (float, int64
     regr = RandomForestRegressor(max_depth= max_depth, n_estimators= n_estimators)
 
     X = df[[input_feature]]
