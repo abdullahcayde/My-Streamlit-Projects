@@ -113,8 +113,8 @@ with st.container():
     st.write('##')
     image_column , text_column = st.columns((1,2))
 
-    #with image_column:
-        #st.image(img01_contact_form)
+    with image_column:
+        st.image(img01_contact_form)
     with text_column:
         st.subheader('Learn How to visualize your Data with Pandas')
         st.write(
@@ -130,8 +130,8 @@ with st.container():
     st.write('##')
     image_column, text_column = st.columns((1, 2))
 
-    #with image_column:
-        #st.image(img02_contact_form)
+    with image_column:
+        st.image(img02_contact_form)
     with text_column:
         st.subheader('Basic Hypothesis Testing, A/B Testing, Varieance Testing ... ')
         st.write(
