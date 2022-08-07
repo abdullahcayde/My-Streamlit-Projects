@@ -62,12 +62,14 @@ st.markdown(
     unsafe_allow_html=True)
 
 # 2 - Use Local Css to config. Website
+'''
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}<style>", unsafe_allow_html=True)
 
 path = f'{path_main}style/style.css'
 local_css(path)
+'''
 
 # 3 - Load Assets (lottie, images)
 lottie_coding =load_lottieurl('https://assets10.lottiefiles.com/packages/lf20_0yfsb3a1.json')
