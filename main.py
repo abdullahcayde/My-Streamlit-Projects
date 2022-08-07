@@ -62,19 +62,19 @@ st.markdown(
     unsafe_allow_html=True)
 
 # 2 - Use Local Css to config. Website
-'''
+
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}<style>", unsafe_allow_html=True)
 
 path = f'{path_main}style/style.css'
-local_css(path)
-'''
+#local_css(path)
+
 
 # 3 - Load Assets (lottie, images)
-#lottie_coding =load_lottieurl('https://assets10.lottiefiles.com/packages/lf20_0yfsb3a1.json')
-#img01_contact_form = Image.open(f'{path_main}images/coding01.jpg')
-#img02_contact_form = Image.open((f'{path_main}images/coding02.jpg'))
+lottie_coding =load_lottieurl('https://assets10.lottiefiles.com/packages/lf20_0yfsb3a1.json')
+img01_contact_form = Image.open(f'{path_main}images/coding01.jpg')
+img02_contact_form = Image.open((f'{path_main}images/coding02.jpg'))
 
 
 # 4 - Headers Section01
@@ -102,8 +102,8 @@ with st.container():
             ''')
         st.write('[Learn more>](https://github.com/abdullahcayde)')
 
-        with right_column:
-            st_lottie(lottie_coding, height=300, key='coding')
+        #with right_column:
+            #st_lottie(lottie_coding, height=300, key='coding')
 
 # 6 - Projects
 # 6.1 - Project01 - Pandas Visualization - Section03
