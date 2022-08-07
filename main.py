@@ -67,8 +67,8 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}<style>", unsafe_allow_html=True)
 
-#path = f'/Users/macbook/Desktop/projects/Github_Repositories/My Streamlit Projects/01 - My First Project/style/style.css'
-#local_css(path)
+path = '/Users/macbook/Desktop/projects/Github_Repositories/My Streamlit Projects/01 - My First Project/style/style.css'
+local_css(path)
 
 
 # 3 - Load Assets (lottie, images)
