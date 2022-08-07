@@ -73,8 +73,8 @@ path = f'{path_main}style/style.css'
 
 # 3 - Load Assets (lottie, images)
 lottie_coding =load_lottieurl('https://assets10.lottiefiles.com/packages/lf20_0yfsb3a1.json')
-img01_contact_form = Image.open(f'{path_main}images/coding01.jpg')
-img02_contact_form = Image.open((f'{path_main}images/coding02.jpg'))
+#img01_contact_form = Image.open(f'{path_main}images/coding01.jpg')
+#img02_contact_form = Image.open((f'{path_main}images/coding02.jpg'))
 
 
 # 4 - Headers Section01
