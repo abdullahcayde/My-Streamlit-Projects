@@ -68,9 +68,6 @@ def local_css(file_name):
 
 local_css("style/style.css")
 
-path = '/Users/macbook/Desktop/projects/Github_Repositories/My Streamlit Projects/01 - My First Project/style/style.css'
-local_css(path)
-
 
 # 3 - Load Assets (lottie, images)
 lottie_coding =load_lottieurl('https://assets10.lottiefiles.com/packages/lf20_0yfsb3a1.json')
