@@ -77,7 +77,7 @@ img02_contact_form = Image.open(('images/coding02.jpg'))
 
 # 4 - Headers Section01
 st.subheader("Hi, I am Abdullah Cay :wave:")
-st.title("A Data Analyst from Germany")
+st.title("A Data Analyst From Germany")
 st.write("I am passionate about finding ways to use Python ")
 st.write("[Learn More >](https://github.com/abdullahcayde)")
 
